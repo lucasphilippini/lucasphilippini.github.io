@@ -1,6 +1,6 @@
-# Lucas Philippini — Portfolio V1.4
+# Lucas Philippini — Portfolio V1.5
 
-This version keeps the V1/V1.3 visual language and adds individual pages for two published LAI-USP articles.
+This version keeps the V1/V1.3 visual language, adds individual pages for two published LAI-USP articles, and includes polished English translations for both.
 
 ## Files
 - `index.html` — main portfolio page
