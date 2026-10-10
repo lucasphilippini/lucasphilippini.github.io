@@ -12,7 +12,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-se
 a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
 header{position:sticky;top:0;z-index:20;background:rgba(246,244,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Georgia,serif;font-size:20px;letter-spacing:.02em}.navlinks{display:flex;gap:25px;font-size:13px;color:#4e504d}.navlinks a:hover{color:var(--accent)}
-.hero{padding:125px 0 105px;border-bottom:1px solid var(--line)}
+.hero{padding:105px 0 95px;border-bottom:1px solid var(--line)}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:70px;align-items:center}
+.hero-copy h1{max-width:760px}
+.portrait-wrap{margin-top:0;justify-self:end}
+.portrait{width:250px;height:315px;object-fit:cover;object-position:center 38%;filter:saturate(.88);border:1px solid var(--line)}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.12}
 h1{font-size:clamp(48px,7vw,82px);max-width:850px;margin:22px 0 25px;letter-spacing:-.035em}
@@ -30,8 +34,8 @@ section{padding:90px 0;border-bottom:1px solid var(--line)}
 .contact-boxes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.contact-box{background:var(--paper);padding:28px 30px;min-height:135px;display:flex;flex-direction:column;justify-content:space-between}.contact-box .meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}.contact-box h3{font-size:24px;margin:10px 0 0}.contact-box a{font-size:14px;color:var(--muted);word-break:break-word}.contact-box:hover h3{color:var(--accent)}
 footer{padding:55px 0}.footergrid{display:flex;justify-content:space-between;gap:30px;color:var(--muted);font-size:13px}
 .mobile{display:none}
-.portrait-wrap{margin-top:42px}.portrait{width:150px;height:190px;object-fit:cover;object-position:center 38%;filter:saturate(.88);border:1px solid var(--line)}
-@media(max-width:760px){.navlinks{display:none}.mobile{display:block;border:0;background:none;font-size:22px}.hero{padding:85px 0 75px}h1{font-size:50px}.hero p{font-size:17px}.grid,.about,.contact-boxes,.research-grid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:15px}.role{grid-template-columns:1fr;gap:10px}.footergrid{display:block}.footergrid div+div{margin-top:18px}.cv-box{display:block}.cv-box .btn{margin-top:20px}}
+
+@media(max-width:760px){.hero-layout{grid-template-columns:1fr;gap:36px}.portrait-wrap{justify-self:start}.portrait{width:190px;height:240px}.navlinks{display:none}.mobile{display:block;border:0;background:none;font-size:22px}.hero{padding:85px 0 75px}h1{font-size:50px}.hero p{font-size:17px}.grid,.about,.contact-boxes,.research-grid{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:15px}.role{grid-template-columns:1fr;gap:10px}.footergrid{display:block}.footergrid div+div{margin-top:18px}.cv-box{display:block}.cv-box .btn{margin-top:20px}}
 </style>
 </head>
 <body>
@@ -47,11 +51,13 @@ footer{padding:55px 0}.footergrid{display:flex;justify-content:space-between;gap
 </header>
 <main id="top">
 <section class="hero">
- <div class="container">
-  <div class="eyebrow">International Relations · Geopolitics · Political Risk</div>
-  <h1>Understanding international affairs through research and analysis.</h1>
-  <p>International Relations student at the University of São Paulo, interested in European security, international political economy, and political and regulatory risk.</p>
-  <div class="buttons"><a class="btn primary" href="#writing">View my writing</a><a class="btn" href="#about">About me</a></div>
+ <div class="container hero-layout">
+  <div class="hero-copy">
+   <div class="eyebrow">International Relations · Geopolitics · Political Risk</div>
+   <h1>Understanding international affairs through research and analysis.</h1>
+   <p>International Relations student at the University of São Paulo, interested in European security, international political economy, and political and regulatory risk.</p>
+   <div class="buttons"><a class="btn primary" href="#writing">View my writing</a><a class="btn" href="#about">About me</a></div>
+  </div>
   <div class="portrait-wrap"><img class="portrait" src="profile.jpg" alt="Portrait of Lucas Philippini"></div>
  </div>
 </section>
@@ -69,13 +75,13 @@ footer{padding:55px 0}.footergrid{display:flex;justify-content:space-between;gap
    <article class="card"><div><div class="meta">European Security · 2026</div><h3>Assessing the European Security Response to the Scaling Back of American Support for Ukraine</h3><p>An analysis of European security adaptation amid changes in the level of American support for Ukraine during the second Trump administration.</p></div><span class="read">Coming soon →</span></article>
    <article class="card"><div><div class="meta">Politics & Elections · 2024</div><h3>Biden Fora, Trump Quase: a Corrida Presidencial nos EUA (até agora)</h3><p>An analysis of the 2024 U.S. presidential race amid the Biden-Trump rematch, the June debate, the assassination attempt against Trump and Biden's withdrawal.</p></div><a class="read" href="article-biden.html">Read article →</a></article>
    <article class="card"><div><div class="meta">Politics & Elections · 2023</div><h3>#OLHARINTERNACIONAL: Uma Anatomia das PASO 2023</h3><p>An analysis of Argentina's 2023 primary elections and the performances of Sergio Massa, Patricia Bullrich, Horacio Rodríguez Larreta and Javier Milei.</p></div><a class="read" href="article-paso-2023.html">Read article →</a></article>
-   <article class="card"><div><div class="meta">Political & Economic Risk</div><h3>Political Risk Notes</h3><p>Short-form analysis connecting geopolitical and regulatory developments with questions relevant to businesses and institutions.</p></div><span class="read">Coming soon →</span></article>
+   <article class="card"><div><div class="meta">Politics & Elections · 2026</div><h3>Aquarela do Brasil: Understanding the Results of Brazil’s 2026 Elections</h3><p>A forthcoming analysis of Brazil’s 2026 elections, exploring the results, electoral dynamics and their implications for the country’s political landscape.</p></div><span class="read">Coming soon →</span></article>
   </div>
  </div>
 </section>
 
 <section id="featured-article"><div class="container article">
-  <div class="eyebrow">Featured analysis · 2024</div><h2>Biden Fora, Trump Quase: The U.S. Presidential Race (So Far)</h2>
+  <div class="eyebrow">Featured analysis · 2024</div><h2>Biden Out, Trump Almost: The U.S. Presidential Race (So Far)</h2>
   <p class="lead">An analysis of the 2024 U.S. presidential race amid the Biden-Trump rematch, the June debate, the assassination attempt against Trump and Biden's withdrawal.</p>
   <p>The article examines the unexpected shifts that reshaped the race in the weeks before the 2024 election, from the debate and the assassination attempt to Biden's withdrawal and Kamala Harris's emergence as the Democratic nominee.</p>
   <p><strong>Read the full article:</strong> <a href="article-biden.html">Biden Fora, Trump Quase →</a></p>
@@ -99,7 +105,7 @@ footer{padding:55px 0}.footergrid{display:flex;justify-content:space-between;gap
    <div class="role"><div><h3>Concordia Public Affairs Strategies</h3><small>Government Relations & Public Policy</small></div><div><small>2025–2026 · 2026–present</small><ul><li>Legislative and executive monitoring</li><li>Political and regulatory analysis</li><li>Stakeholder mapping and reporting</li></ul></div></div>
    <div class="role"><div><h3>University of São Paulo — Bertha Lutz International Analysis Lab</h3><small>Senior Fellow / Communications</small></div><div><small>2023–2025</small><ul><li>International affairs research and analysis</li><li>Editorial and communications work</li><li>Content production and institutional communication</li></ul></div></div>
    <div class="role"><div><h3>Jagiellonian University</h3><small>Exchange Student · Institute of Political Science and International Relations</small></div><div><small>2026 · Kraków, Poland</small><p>Academic work focused on Russian foreign and security policy, European security, Central and Eastern European politics, Russian society and European monetary and economic policy.</p></div></div>
-   <div class="role"><div><h3>University of São Paulo — IRI-USP</h3><small>Bachelor's Candidate in International Relations</small></div><div><small>2023–present</small><p>International Relations undergraduate studies. Valedictorian of the 49th Graduating Class.</p></div></div>
+   <div class="role"><div><h3>University of São Paulo — IRI-USP</h3><small>Bachelor's Candidate in International Relations</small></div><div><small>2023–present</small><p>International Relations undergraduate studies.</p></div></div>
   </div>
 </div></section>
 
